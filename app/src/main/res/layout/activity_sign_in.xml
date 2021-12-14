@@ -8,82 +8,139 @@
     android:orientation="vertical"
     tools:context=".Sign_In">
 
-    <ImageView
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:src="@drawable/appicon1"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="129dp"
-        tools:layout_editor_absoluteY="80dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        />
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/smoochregular"
-        android:textSize="40sp"
-        android:layout_gravity="center"
-        android:text="Sign In"
-        android:textColor="@color/white"
-        android:textAlignment="center"
-        />
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/appicon1"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="129dp"
+            tools:layout_editor_absoluteY="80dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/smoochregular"
+            android:text="Sign In"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:textSize="25sp"
+                android:text="Username"
+                android:textColor="@color/black"
+                android:fontFamily="@font/smoochregular"
+                android:layout_marginStart="20dp"
+                />
+
+            <EditText
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/user1"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:drawablePadding="10dp"
+                android:minHeight="48dp"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:textSize="25sp"
+                android:text="Password"
+                android:textColor="@color/black"
+                android:fontFamily="@font/smoochregular"
+                android:layout_marginStart="20dp"
+                />
+
+            <EditText
+                android:id="@+id/passwordUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:drawableEnd="@drawable/closed"
+                android:drawablePadding="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:padding="10dp"
+                />
+
+
+
+            <TextView
+                android:id="@+id/btn_forgotPass"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:textSize="25sp"
+                android:text="Forgot password"
+                android:textColor="@color/five"
+                android:fontFamily="@font/smoochregular"
+                android:textAlignment="textEnd"
+                android:paddingEnd="20dp"
+                />
+
+            <Button
+                android:id="@+id/btn_SignIn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                app:backgroundTint="@color/five"
+                app:cornerRadius="50dp"
+                android:fontFamily="@font/smoochregular"
+                android:text="Sign In"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:id="@+id/btn_SignUp"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:textSize="25sp"
+                android:text="Sign Up"
+                android:textColor="@color/five"
+                android:fontFamily="@font/smoochregular"
+                android:textAlignment="center"
+                android:paddingEnd="20dp"
+                />
+        </LinearLayout>
+    </ScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="10dp"
         >
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="40dp"
-            android:textSize="32sp"
-            android:text="Username"
-            android:textColor="@color/black"
-            android:fontFamily="@font/smoochregular"
-            android:layout_marginStart="20dp"
-            />
 
-        <EditText
-            android:id="@+id/userName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawablePadding="10dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:padding="10dp"
-            />
-
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="40dp"
-            android:textSize="32sp"
-            android:text="Password"
-            android:textColor="@color/black"
-            android:fontFamily="@font/smoochregular"
-            android:layout_marginStart="20dp"
-            />
-
-         <EditText
-            android:id="@+id/passwordUser"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-             android:drawablePadding="10dp"
-             android:layout_marginStart="20dp"
-             android:layout_marginEnd="20dp"
-             android:padding="10dp"
-
-            />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:backgroundTint="@color/five"
-            android:layout_marginTop="20dp"
-
-            />
 
     </LinearLayout>
 
