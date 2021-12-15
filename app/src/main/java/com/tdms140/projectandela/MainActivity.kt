@@ -10,6 +10,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         val handler = Handler()
         Handler().postDelayed({
             val intent = Intent(this,Sign_In::class.java)
