@@ -3,17 +3,16 @@ package com.tdms140.projectandela
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
+import android.widget.ImageButton
 
-class MainActivity : AppCompatActivity() {
+class ChooseOption : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_choose_option)
 
-        val handler = Handler()
-        Handler().postDelayed({
-            val intent = Intent(this,ChooseOption::class.java)
+        findViewById<ImageButton>(R.id.btn_teacher).setOnClickListener{
+            val intent = Intent(this,Sign_In::class.java)
             startActivity(intent)
-        },2000)
+        }
     }
 }
