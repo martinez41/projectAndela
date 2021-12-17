@@ -11,7 +11,7 @@
         android:theme="@style/Theme.ProjectAndela">
         <activity
             android:name=".Sign_In"
-            android:exported="true" />
+            android:exported="true"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
